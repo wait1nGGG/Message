@@ -1,13 +1,15 @@
 {
-  "name": "lanchat-backend",
+  "name": "my-app",
   "version": "1.0.0",
-  "description": "Local Area Network Chat Application Backend",
-  "main": "server.js",
+  "main": "main.js",
+  "author": "wait1nG",
   "scripts": {
-    "start": "node server.js"
+    "start": "electron .",
+    "package-win": "electron-packager . --platform=win32 --arch=x64 --out=dist --overwrite",
+    "package-mac": "electron-packager . --platform=darwin --arch=x64 --out=dist --overwrite"
   },
-  "dependencies": {
-    "express": "^4.18.2",
-    "ws": "^8.13.0"
+  "devDependencies": {
+    "electron": "^36.4.0",
+    "electron-packager": "^17.1.1"
   }
 }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>局域网聊天室</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div id="login-screen" class="screen active">
+        <div class="login-container">
+            <h1>局域网聊天室</h1>
+            <input type="text" id="username" placeholder="输入您的昵称">
+            <button id="start-chat">开始聊天</button>
+        </div>
+    </div>
+
+    <div id="chat-screen" class="screen">
+        <div class="chat-container">
+            <div class="sidebar">
+                <div class="user-info">
+                    <span class="material-icons" id="user-icon">person</span>
+                    <span id="current-username">游客</span>
+                </div>
+                <div class="contacts-list">
+                    <div class="contact-header">
+                        <span>联系人</span>
+                        <button id="add-contact" title="添加联系人">
+                            <span class="material-icons">person_add</span>
+                        </button>
+                    </div>
+                    <ul id="contacts"></ul>
+                </div>
+            </div>
+            
+            <div class="chat-content">
+                <div class="chat-header">
+                    <div id="chat-title">未选择联系人</div>
+                    <div id="connection-status">离线</div>
+                </div>
+                
+                <div id="message-container">
+                    <!-- 消息将在这里显示 -->
+                </div>
+                
+                <div class="message-input">
+                    <input type="text" id="message-input" placeholder="输入消息...">
+                    <button id="send-btn">
+                        <span class="material-icons">send</span>
+                    </button>
+                    <label for="file-input" class="file-btn">
+                        <span class="material-icons">attach_file</span>
+                    </label>
+                    <input type="file" id="file-input" hidden>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 添加联系人对话框 -->
+        <div id="add-contact-modal" class="modal">
+            <div class="modal-content">
+                <h2>添加联系人</h2>
+                <input type="text" id="contact-ip" placeholder="输入对方IP地址">
+                <input type="text" id="contact-name" placeholder="输入联系人昵称">
+                <div class="modal-actions">
+                    <button id="add-contact-cancel">取消</button>
+                    <button id="add-contact-confirm">添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

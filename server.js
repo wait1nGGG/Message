@@ -209,7 +209,7 @@ function getLocalIpAddress() {
 }
 
 // 启动服务器
-const PORT = 3001;
+const PORT = 3000;
 server.listen(PORT, () => {
     const ip = getLocalIpAddress();
     console.log(`服务器已启动`);
